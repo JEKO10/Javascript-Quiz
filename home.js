@@ -15,10 +15,51 @@ const random = Math.floor(Math.random() * 3);
 
 let counter = -1;
 let numQ = 0;
+let correct = 0;
+let wrong = 0;
 
 answers.forEach((item) => {
   item.addEventListener("click", () => {
     btn.classList.remove("none");
+    if (
+      parseInt(item.getAttribute("data-num")) ===
+      questionsArray[random].questions[counter].correctIndex
+    ) {
+      item.classList.add("correct");
+      correct++;
+    } else {
+      item.classList.add("wrong");
+      wrong++;
+    }
+    if (
+      optionFirst.classList.contains("correct") ||
+      optionFirst.classList.contains("wrong")
+    ) {
+      optionSecond.classList.add("hidden");
+      optionThird.classList.add("hidden");
+      optionFourth.classList.add("hidden");
+    } else if (
+      optionSecond.classList.contains("correct") ||
+      optionSecond.classList.contains("wrong")
+    ) {
+      optionFirst.classList.add("hidden");
+      optionThird.classList.add("hidden");
+      optionFourth.classList.add("hidden");
+    } else if (
+      optionThird.classList.contains("correct") ||
+      optionThird.classList.contains("wrong")
+    ) {
+      optionFirst.classList.add("hidden");
+      optionSecond.classList.add("hidden");
+      optionFourth.classList.add("hidden");
+    } else if (
+      optionFourth.classList.contains("correct") ||
+      optionFourth.classList.contains("wrong")
+    ) {
+      optionFirst.classList.add("hidden");
+      optionSecond.classList.add("hidden");
+      optionThird.classList.add("hidden");
+    }
   });
 });
 
@@ -28,6 +69,11 @@ btn.addEventListener("click", () => {
   btn.classList.add("none");
   btn.innerHTML = "Next";
   nextQuestion();
+  answers.forEach((item) => {
+    item.classList.remove("correct");
+    item.classList.remove("wrong");
+    item.classList.remove("hidden");
+  });
 });
 
 const nextQuestion = () => {
