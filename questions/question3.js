@@ -12,7 +12,7 @@ export const question3 = {
     },
     {
       question: "What was the most streamed show on Netflix in 2020?",
-      answers: ["Queen's gambit", "WestWorld", "The Umbrella Academy", "Lupin"],
+      answers: ["Queen's gambit", "Westworld", "The Umbrella Academy", "Lupin"],
       correctIndex: 2,
     },
     {

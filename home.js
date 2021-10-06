@@ -22,6 +22,7 @@ let counter = -1;
 let numQ = 0;
 let correct = 0;
 let wrong = 0;
+let clicked = false;
 
 answers.forEach((item) => {
   item.addEventListener("click", () => {
@@ -31,10 +32,16 @@ answers.forEach((item) => {
       questionsArray[random].questions[counter].correctIndex
     ) {
       item.classList.add("correct");
-      correct++;
+      if (clicked === false) {
+        clicked = true;
+        correct++;
+      }
     } else {
       item.classList.add("wrong");
-      wrong++;
+      if (clicked === false) {
+        clicked = true;
+        wrong++;
+      }
     }
     if (
       optionFirst.classList.contains("correct") ||
@@ -74,6 +81,7 @@ btn.addEventListener("click", () => {
   btn.classList.add("none");
   btn.innerHTML = "Next";
   nextQuestion();
+  clicked = false;
   answers.forEach((item) => {
     item.classList.remove("correct");
     item.classList.remove("wrong");
