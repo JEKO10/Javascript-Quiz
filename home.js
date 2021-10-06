@@ -9,6 +9,10 @@ const optionThird = document.querySelector(".optionThird");
 const optionFourth = document.querySelector(".optionFourth");
 const btn = document.querySelector("#btn");
 const answers = document.querySelectorAll(".answer");
+const results = document.querySelector(".results");
+const correctRes = document.querySelector("#correctR");
+const wrongRes = document.querySelector("#wrongR");
+const final = document.querySelector("#final");
 
 const questionsArray = [question1, question2, question3];
 const random = Math.floor(Math.random() * 3);
