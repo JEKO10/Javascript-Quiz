@@ -8,17 +8,24 @@ const optionSecond = document.querySelector(".optionSecond");
 const optionThird = document.querySelector(".optionThird");
 const optionFourth = document.querySelector(".optionFourth");
 const btn = document.querySelector("#btn");
+const answers = document.querySelectorAll(".answer");
 
 const questionsArray = [question1, question2, question3];
 const random = Math.floor(Math.random() * 3);
-console.log(random);
 
 let counter = -1;
 let numQ = 0;
 
+answers.forEach((item) => {
+  item.addEventListener("click", () => {
+    btn.classList.remove("none");
+  });
+});
+
 btn.addEventListener("click", () => {
   counter++;
   numQ++;
+  btn.classList.add("none");
   btn.innerHTML = "Next";
   nextQuestion();
 });

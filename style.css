@@ -36,3 +36,7 @@ main h1 {
   background: lightskyblue;
   cursor: pointer;
 }
+
+.none {
+  display: none;
+}
