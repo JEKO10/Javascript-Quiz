@@ -6,11 +6,6 @@ body {
   text-align: center;
 }
 
-#title {
-  font-size: 4rem;
-  margin-bottom: 0;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -25,16 +20,21 @@ main h1 {
   cursor: pointer;
 }
 
-#question {
-  font-size: 3rem;
-  margin-bottom: 0;
-}
-
-#btn {
+button {
   font-size: 3rem;
   border-radius: 20px;
   background: lightskyblue;
   cursor: pointer;
+}
+
+#title {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+#question {
+  font-size: 3rem;
+  margin-bottom: 0;
 }
 
 .results h1 {

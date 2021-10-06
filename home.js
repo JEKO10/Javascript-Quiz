@@ -14,6 +14,7 @@ const results = document.querySelector(".results");
 const correctRes = document.querySelector("#correctR");
 const wrongRes = document.querySelector("#wrongR");
 const final = document.querySelector("#final");
+const again = document.querySelector("#again");
 
 const questionsArray = [question1, question2, question3];
 const random = Math.floor(Math.random() * 3);
@@ -112,3 +113,7 @@ const nextQuestion = () => {
     ).toFixed(2)}%`;
   }
 };
+
+again.addEventListener("click", () => {
+  window.location.reload();
+});
