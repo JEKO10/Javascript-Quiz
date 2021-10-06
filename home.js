@@ -9,6 +9,7 @@ const optionThird = document.querySelector(".optionThird");
 const optionFourth = document.querySelector(".optionFourth");
 const btn = document.querySelector("#btn");
 const answers = document.querySelectorAll(".answer");
+const main = document.querySelector(".main");
 const results = document.querySelector(".results");
 const correctRes = document.querySelector("#correctR");
 const wrongRes = document.querySelector("#wrongR");
@@ -92,5 +93,14 @@ const nextQuestion = () => {
       questionsArray[random].questions[counter].answers[2];
     optionFourth.innerHTML =
       questionsArray[random].questions[counter].answers[3];
+  } else {
+    main.classList.add("none");
+    results.classList.remove("none");
+    correctRes.innerHTML = `Correct answers: ${correct}`;
+    wrongRes.innerHTML = `Wrong aswers: ${wrong}`;
+    final.innerHTML = `Your result: ${correct} / 12 => ${(
+      (100 * correct) /
+      12
+    ).toFixed(2)}%`;
   }
 };
