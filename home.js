@@ -15,6 +15,7 @@ const correctRes = document.querySelector("#correctR");
 const wrongRes = document.querySelector("#wrongR");
 const final = document.querySelector("#final");
 const again = document.querySelector("#again");
+const best = document.querySelector("#best");
 
 const questionsArray = [question1, question2, question3];
 const random = Math.floor(Math.random() * 3);
@@ -107,6 +108,10 @@ const nextQuestion = () => {
     results.classList.remove("none");
     correctRes.innerHTML = `Correct answers: ${correct}`;
     wrongRes.innerHTML = `Wrong aswers: ${wrong}`;
+    if (correct > localStorage.getItem("highscore")) {
+      localStorage.setItem("highscore", correct);
+    }
+    best.innerHTML = `High score: ${localStorage.getItem("highscore")}`;
     final.innerHTML = `Your result: ${correct} / 12 => ${(
       (100 * correct) /
       12
