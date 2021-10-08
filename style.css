@@ -15,8 +15,9 @@ main {
 
 main h1 {
   background: lightskyblue;
-  width: 50%;
   border: 2px solid black;
+  width: 800px;
+  max-width: 100%;
   cursor: pointer;
 }
 
@@ -55,4 +56,22 @@ button {
 
 .hidden {
   visibility: hidden;
+}
+
+@media screen and (max-width: 489px) {
+  #title {
+    font-size: 2rem;
+  }
+
+  #question {
+    font-size: 2rem;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+
+  #final {
+    font-size: 1.5rem;
+  }
 }
