@@ -92,7 +92,7 @@ btn.addEventListener("click", () => {
 });
 
 const nextQuestion = () => {
-  if (counter < 12) {
+  if (counter < 13) {
     question.innerHTML =
       `${numQ}. ` + questionsArray[random].questions[counter].question;
     optionFirst.innerHTML =
@@ -112,9 +112,9 @@ const nextQuestion = () => {
       localStorage.setItem("highscore", correct);
     }
     best.innerHTML = `High score: ${localStorage.getItem("highscore")}`;
-    final.innerHTML = `Your result: ${correct} / 12 => ${(
+    final.innerHTML = `Your result: ${correct} / 13 => ${(
       (100 * correct) /
-      12
+      13
     ).toFixed(2)}%`;
   }
 };

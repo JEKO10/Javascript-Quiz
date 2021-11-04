@@ -75,5 +75,10 @@ export const question2 = {
       answers: ["117", "3120", "3380", "3520"],
       correctIndex: 2,
     },
+    {
+      question: "In what US State is the city Nashville?",
+      answers: ["Texas", "Virginia", "Tennesse", "Florida"],
+      correctIndex: 2,
+    },
   ],
 };

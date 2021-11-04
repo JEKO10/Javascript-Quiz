@@ -66,5 +66,10 @@ export const question3 = {
       answers: ["Nile", "Amazon", "Po", "Euphrates"],
       correctIndex: 2,
     },
+    {
+      question: "What is the capital of New Zealand?",
+      answers: ["Sydney", "Parramatta", "Blacktown", "Wellington"],
+      correctIndex: 3,
+    },
   ],
 };

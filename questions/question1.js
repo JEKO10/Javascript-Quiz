@@ -86,5 +86,11 @@ export const question1 = {
       answers: ["0x18C1", "0xBEEF", "0xDEAD", "0x12D591"],
       correctIndex: 1,
     },
+    {
+      question:
+        "In which part of your body would you find the cruciate ligament?",
+      answers: ["Knee", "Leg", "Arm", "Neck"],
+      correctIndex: 0,
+    },
   ],
 };
